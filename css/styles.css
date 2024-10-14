@@ -1,0 +1,392 @@
+/* Reset styles and general styles */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 70px;
+    /* To prevent content from being hidden behind fixed navbar */
+}
+
+/* Navbar Styles */
+header {
+    background: linear-gradient(90deg, #ff6f61, #ffb347);
+    /* Gradient background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    position: fixed;
+    /* Fixed at the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+/* Logo Styling */
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    /* Increased size */
+    font-weight: 700;
+    /* Bold */
+    letter-spacing: 2px;
+    /* Spacing between letters */
+    text-transform: uppercase;
+    /* Uppercase letters */
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Underline effect for logo */
+.logo a::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: white;
+    margin: 5px auto 0;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.logo a:hover {
+    color: #ffeedb;
+    transform: scale(1.05);
+}
+
+.logo a:hover::after {
+    width: 100px;
+}
+
+/* Navigation Links */
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Underline hover effect */
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Active link styling */
+.nav-links a.active {
+    color: #ffeedb;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+    background-color: #ffeedb;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://media.istockphoto.com/id/1417882544/photo/large-group-of-cats-and-dogs-looking-at-the-camera-on-blue-background.jpg?s=2048x2048&w=is&k=20&c=f8CxZ2Fqp5C_gweD_p2qIEzdCG2P5vqtFfFPS-HHEIo=');
+    /* Background image for the hero section */
+    background-size: cover;
+    background-position: top;
+    height: 95vh;
+
+    /* Full viewport height */
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay for better text readability */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 80px;
+    /* Adjust font size as needed */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    /* Adjust font size as needed */
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    padding: 15px 30px;
+    /* Button padding */
+    text-decoration: none;
+    /* No underline */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Button font size */
+    transition: background-color 0.3s;
+    /* Smooth transition */
+    margin: 10px;
+    /* Space between buttons */
+    display: inline-block;
+    /* Ensures they are displayed next to each other */
+}
+
+.cta-button:hover {
+    background-color: #ffb347;
+    /* Change button color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ff6f61;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px;
+        border-radius: 5px;
+        z-index: 999;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        height: 60vh;
+        /* Adjust height for smaller screens */
+        background-position: top;
+        /* Adjust if you want to show more of the top part */
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 18px;
+        /* Adjust font size for smaller screens */
+    }
+}
