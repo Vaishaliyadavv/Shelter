@@ -148,11 +148,8 @@ body {
 /* Navbar Styles */
 header {
     background: linear-gradient(90deg, #ff6f61, #ffb347);
-    /* Gradient background */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
     position: fixed;
-    /* Fixed at the top */
     width: 100%;
     top: 0;
     left: 0;
@@ -173,18 +170,13 @@ header {
     text-decoration: none;
     color: white;
     font-size: 32px;
-    /* Increased size */
     font-weight: 700;
-    /* Bold */
     letter-spacing: 2px;
-    /* Spacing between letters */
     text-transform: uppercase;
-    /* Uppercase letters */
     position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Underline effect for logo */
 .logo a::after {
     content: '';
     display: block;
@@ -231,7 +223,6 @@ nav {
     transition: color 0.3s ease;
 }
 
-/* Underline hover effect */
 .nav-links a::after {
     content: '';
     display: block;
@@ -248,7 +239,6 @@ nav {
     width: 100%;
 }
 
-/* Active link styling */
 .nav-links a.active {
     color: #ffeedb;
 }
@@ -279,15 +269,14 @@ nav {
     justify-content: center;
     align-items: center;
     background-image: url('https://media.istockphoto.com/id/1417882544/photo/large-group-of-cats-and-dogs-looking-at-the-camera-on-blue-background.jpg?s=2048x2048&w=is&k=20&c=f8CxZ2Fqp5C_gweD_p2qIEzdCG2P5vqtFfFPS-HHEIo=');
-    /* Background image for the hero section */
     background-size: cover;
     background-position: top;
-    height: 95vh;
-
+    min-height: 95vh;
     /* Full viewport height */
     text-align: center;
     color: white;
     position: relative;
+    padding: 20px;
 }
 
 .hero::before {
@@ -306,87 +295,124 @@ nav {
     position: relative;
     z-index: 2;
     padding: 20px;
+    max-width: 800px;
+    width: 100%;
 }
 
 .hero h1 {
     font-size: 80px;
-    /* Adjust font size as needed */
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 24px;
-    /* Adjust font size as needed */
     margin-bottom: 30px;
 }
 
-.cta-button {
-    background-color: #ff6f61;
-    /* Button background color */
-    color: white;
-    /* Button text color */
-    padding: 15px 30px;
-    /* Button padding */
-    text-decoration: none;
-    /* No underline */
-    border-radius: 5px;
-    /* Rounded corners */
+/* Search Container Styles */
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    /* Adjust as needed */
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff6f61 0%, #ffb347 100%);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    /* Center the search box */
+}
+
+.search-container::before,
+.search-container::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.search-container::before {
+    background: linear-gradient(135deg, #ff6f61 0%, #ffb347 100%);
+    opacity: 0.9;
+}
+
+.search-container::after {
+    background: linear-gradient(135deg, #ffb347 0%, #ffc16d 100%);
+    box-shadow: rgba(255, 111, 97, 0.6) 3px 3px 5px 0px, rgba(255, 111, 97, 0.6) 5px 5px 20px 0px;
+    opacity: 0.8;
+}
+
+/* Input Field Styles */
+.input {
+    padding: 12px 15px;
+    width: 100%;
+    background: linear-gradient(135deg, #ffe1dc 0%, #ffd1a7 100%);
+    border: none;
+    color: #ff6f61;
     font-size: 18px;
-    /* Button font size */
-    transition: background-color 0.3s;
-    /* Smooth transition */
-    margin: 10px;
-    /* Space between buttons */
-    display: inline-block;
-    /* Ensures they are displayed next to each other */
+    border-radius: 50px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: #ffb347;
-    /* Change button color on hover */
+.input::placeholder {
+    color: #ff6f61;
 }
 
-/* Responsive Styles */
+.input:focus {
+    outline: none;
+    background: linear-gradient(135deg, #ffeedb 0%, #ffd1a7 100%);
+    color: #ff6f61;
+}
+
+/* Search Button Styles */
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: background 0.3s ease;
+    border-radius: 50%;
+}
+
+.search-button:hover {
+    background: rgba(255, 111, 97, 0.2);
+}
+
+.search__icon {
+    width: 24px;
+    height: 24px;
+    fill: #ff6f61;
+    /* Orange color */
+    transition: fill 0.3s ease;
+}
+
+.search-button:hover .search__icon {
+    fill: #ffb347;
+    /* Lighter orange on hover */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #ff6f61;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        padding: 20px;
-        border-radius: 5px;
-        z-index: 999;
+    .search-container {
+        max-width: 90%;
+        padding: 8px;
     }
 
-    .nav-links.show {
-        display: flex;
+    .input {
+        font-size: 16px;
     }
 
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .hero {
-        height: 60vh;
-        /* Adjust height for smaller screens */
-        background-position: top;
-        /* Adjust if you want to show more of the top part */
-    }
-
-    .hero h1 {
-        font-size: 32px;
-        /* Adjust font size for smaller screens */
-    }
-
-    .hero p {
-        font-size: 18px;
-        /* Adjust font size for smaller screens */
+    .search__icon {
+        width: 20px;
+        height: 20px;
     }
 }
