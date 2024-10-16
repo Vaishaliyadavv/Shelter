@@ -415,6 +415,9 @@ nav {
     }
 }
 
+
+
+
 /* Adoption Plans Section Styling */
 .adoption-plans {
     position: relative;
@@ -460,12 +463,12 @@ nav {
 
     /* Side Panels */
     .adpt-plan.side-plan {
-        width: max-content;
+        width: 400px;
     }
 
     /* Center Panel */
     .adpt-plan.center-plan {
-        width: max-content;
+        width: 450px;
     }
 }
 
@@ -476,7 +479,7 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     padding: 25px;
-    width: max-content;
+    width: 450px;
     /* max-width: 300px; */
     margin: 15px 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -536,7 +539,7 @@ nav {
 }
 
 /* Pricing */
-.adpt-price {
+.adpt-slogan {
     color: #fff;
     display: block;
     font-size: 28px;
@@ -547,10 +550,10 @@ nav {
 /* Buttons */
 .adpt-button {
     border: 1px solid #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     color: #ff6f61;
     display: inline-block;
-    padding: 10px 25px;
+    padding: 20px 50px;
     text-decoration: none;
     margin: 20px 0;
     transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
