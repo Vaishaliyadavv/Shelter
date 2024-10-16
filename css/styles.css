@@ -287,7 +287,6 @@ nav {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    /* Dark overlay for better text readability */
     z-index: 1;
 }
 
@@ -391,7 +390,6 @@ nav {
     width: 24px;
     height: 24px;
     fill: #ff6f61;
-    /* Orange color */
     transition: fill 0.3s ease;
 }
 
@@ -414,5 +412,176 @@ nav {
     .search__icon {
         width: 20px;
         height: 20px;
+    }
+}
+
+/* Adoption Plans Section Styling */
+.adoption-plans {
+    position: relative;
+    z-index: 10;
+    margin-top: -80px;
+    padding-top: 80px;
+    background: linear-gradient(135deg, #ff6f61, #ffb347);
+    color: white;
+    text-align: center;
+}
+
+.adoption-plans h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+}
+
+/* Panels Container */
+.panels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* Space between panels */
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #ff6f61, #ffb347);
+    /* Matching the navbar gradient */
+    color: white;
+}
+
+@media (min-width: 900px) {
+    .panels {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Side Panels */
+    .adpt-plan.side-plan {
+        width: max-content;
+    }
+
+    /* Center Panel */
+    .adpt-plan.center-plan {
+        width: max-content;
+    }
+}
+
+/* Adoption Plan Cards */
+.adpt-plan {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent to blend with background */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 25px;
+    width: max-content;
+    /* max-width: 300px; */
+    margin: 15px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.adpt-plan:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.adpt-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+    border-radius: 40px;
+
+    /* margin-bottom: 25px;
+    max-width: 100%;
+    max-height: 80px;
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+/* Adoption Plan Header */
+.adpt-header {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+/* Features List */
+.adpt-features {
+    margin: 20px 0;
+    color: #fff;
+    text-align: left;
+}
+
+.adpt-features-item {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.adpt-features-item:first-child {
+    border-top: none;
+}
+
+.adpt-features-item:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Pricing */
+.adpt-price {
+    color: #fff;
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+/* Buttons */
+.adpt-button {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #ff6f61;
+    display: inline-block;
+    padding: 10px 25px;
+    text-decoration: none;
+    margin: 20px 0;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+    background-color: transparent;
+}
+
+.adpt-button:hover,
+.adpt-button:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.adpt-button.is-featured {
+    background-color: #fff;
+    color: #ff6f61;
+}
+
+.adpt-button.is-featured:hover,
+.adpt-button.is-featured:focus {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+/* Responsive Layout for Panels */
+@media (min-width: 900px) {
+    .panels {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .adpt-plan {
+        width: max-content;
     }
 }
