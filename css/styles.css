@@ -535,6 +535,7 @@ nav {
         transition: max-height 0.3s ease-in-out;
     }
 
+
     nav.active {
         max-height: 300px;
     }
@@ -692,4 +693,68 @@ nav {
         flex-direction: column;
         align-items: center;
     }
+
 }
+
+.footer {
+    background: white;
+     color: black;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-info, .footer-links, .footer-social {
+    margin-bottom: 20px;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffeedb;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social img:hover {
+    opacity: 0.7;
+}
+
+
