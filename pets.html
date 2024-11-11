@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets for Adoption</title>
+    <link rel="stylesheet" href="css/pets.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <header class="top-bar">
+        <div class="top-bar-container">
+            <h1 class="page-title">Pets for Adoption</h1>
+            <input type="text" class="search-input" placeholder="Search pets...">
+            <!-- <div class="quick-filters">
+                <button class="filter-btn" data-filter="Dogs">Dogs</button>
+                <button class="filter-btn" data-filter="Cats">Cats</button>
+                <button class="filter-btn" data-filter="Birds">Birds</button>
+            </div> -->
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Find Your Pet</h2>
+
+            <!-- Filter by Category -->
+            <div class="filter-section">
+                <h3>Pet Type</h3>
+                <label><input type="checkbox" name="category" value="Dog"> Dogs</label>
+                <label><input type="checkbox" name="category" value="Cat"> Cats</label>
+                <label><input type="checkbox" name="category" value="Bird"> Birds</label>
+            </div>
+
+            <!-- Filter by Age -->
+            <div class="filter-section">
+                <h3>Age</h3>
+                <label><input type="radio" name="age" value="Young"> Young</label>
+                <label><input type="radio" name="age" value="Adult"> Adult</label>
+                <label><input type="radio" name="age" value="Senior"> Senior</label>
+            </div>
+
+            <!-- Filter by Size -->
+            <div class="filter-section">
+                <h3>Size</h3>
+                <label><input type="radio" name="size" value="Small"> Small</label>
+                <label><input type="radio" name="size" value="Medium"> Medium</label>
+                <label><input type="radio" name="size" value="Large"> Large</label>
+            </div>
+        </aside>
+
+        <!-- Main Content (for pet listings) -->
+        <main class="main-content">
+            <div class="pet-cards-container">
+                <!-- Pet Cards go here -->
+        
+            <div class="pet-card">
+                <img src="https://images.unsplash.com/photo-1650277700178-e699deee2ac6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z29sZGVuJTIwcmV0cml2ZXJ8ZW58MHx8MHx8fDA%3D" alt="Pet 1">
+                <div class="pet-info">
+                    <h3>Max</h3>
+                    <p>Breed: Golden Retriever</p>
+                    <p>Age: 3 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 2 -->
+            <div class="pet-card">
+                <img src="https://plus.unsplash.com/premium_photo-1683134006899-50a97a0330cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bGFicmFkb3J8ZW58MHx8MHx8fDA%3D" alt="Pet 2">
+                <div class="pet-info">
+                    <h3>Bella</h3>
+                    <p>Breed: Labrador</p>
+                    <p>Age: 2 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 3 -->
+            <div class="pet-card">
+                <img src="https://images.unsplash.com/photo-1503774620960-c9c62fe1c6ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9vZGxlfGVufDB8fDB8fHww" alt="Pet 3">
+                <div class="pet-info">
+                    <h3>Luna</h3>
+                    <p>Breed: Poodle</p>
+                    <p>Age: 1 year</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 4 -->
+            <div class="pet-card">
+                <img src="https://images.unsplash.com/photo-1508807226959-28bb47d71ab0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEJ1bGxkb2d8ZW58MHx8MHx8fDA%3D" alt="Pet 4">
+                <div class="pet-info">
+                    <h3>Charlie</h3>
+                    <p>Breed: Bulldog</p>
+                    <p>Age: 4 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 5 -->
+            <div class="pet-card">
+                <img src="https://images.unsplash.com/photo-1534985111090-85c477f9d813?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fEJlYWdsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Pet 5">
+                <div class="pet-info">
+                    <h3>Daisy</h3>
+                    <p>Breed: Beagle</p>
+                    <p>Age: 5 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 6 -->
+            <div class="pet-card">
+                <img src="https://plus.unsplash.com/premium_photo-1661962970543-1ee557960078?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fERhY2hzaHVuZHxlbnwwfHwwfHx8MA%3D%3D" alt="Pet 6">
+                <div class="pet-info">
+                    <h3>Cooper</h3>
+                    <p>Breed: Dachshund</p>
+                    <p>Age: 2 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 7 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 7">
+                <div class="pet-info">
+                    <h3>Sadie</h3>
+                    <p>Breed: Boxer</p>
+                    <p>Age: 3 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 8 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 8">
+                <div class="pet-info">
+                    <h3>Rex</h3>
+                    <p>Breed: German Shepherd</p>
+                    <p>Age: 2 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 9 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 9">
+                <div class="pet-info">
+                    <h3>Zoe</h3>
+                    <p>Breed: Cocker Spaniel</p>
+                    <p>Age: 4 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 10 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 10">
+                <div class="pet-info">
+                    <h3>Oliver</h3>
+                    <p>Breed: Shih Tzu</p>
+                    <p>Age: 1 year</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 11 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 11">
+                <div class="pet-info">
+                    <h3>Riley</h3>
+                    <p>Breed: Chihuahua</p>
+                    <p>Age: 3 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 12 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 12">
+                <div class="pet-info">
+                    <h3>Jasper</h3>
+                    <p>Breed: Pug</p>
+                    <p>Age: 4 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 13 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 13">
+                <div class="pet-info">
+                    <h3>Maximus</h3>
+                    <p>Breed: Rottweiler</p>
+                    <p>Age: 6 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 14 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 14">
+                <div class="pet-info">
+                    <h3>Ruby</h3>
+                    <p>Breed: Greyhound</p>
+                    <p>Age: 2 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 15 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 15">
+                <div class="pet-info">
+                    <h3>Buddy</h3>
+                    <p>Breed: Yorkshire Terrier</p>
+                    <p>Age: 3 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 16 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 16">
+                <div class="pet-info">
+                    <h3>Gizmo</h3>
+                    <p>Breed: Schnauzer</p>
+                    <p>Age: 4 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 17 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 17">
+                <div class="pet-info">
+                    <h3>Chester</h3>
+                    <p>Breed: Pekingese</p>
+                    <p>Age: 2 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 18 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 18">
+                <div class="pet-info">
+                    <h3>Holly</h3>
+                    <p>Breed: Border Collie</p>
+                    <p>Age: 5 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 19 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 19">
+                <div class="pet-info">
+                    <h3>Oscar</h3>
+                    <p>Breed: Shiba Inu</p>
+                    <p>Age: 1 year</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 20 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 20">
+                <div class="pet-info">
+                    <h3>Bailey</h3>
+                    <p>Breed: Australian Shepherd</p>
+                    <p>Age: 3 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 21 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 21">
+                <div class="pet-info">
+                    <h3>Rocco</h3>
+                    <p>Breed: Pitbull</p>
+                    <p>Age: 2 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 22 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 22">
+                <div class="pet-info">
+                    <h3>Lexi</h3>
+                    <p>Breed: Husky</p>
+                    <p>Age: 4 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 23 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 23">
+                <div class="pet-info">
+                    <h3>Simba</h3>
+                    <p>Breed: Bengal</p>
+                    <p>Age: 3 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 24 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 24">
+                <div class="pet-info">
+                    <h3>Lily</h3>
+                    <p>Breed: Persian</p>
+                    <p>Age: 2 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 25 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 25">
+                <div class="pet-info">
+                    <h3>Milo</h3>
+                    <p>Breed: Maine Coon</p>
+                    <p>Age: 4 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 26 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 26">
+                <div class="pet-info">
+                    <h3>Rocky</h3>
+                    <p>Breed: Sphynx</p>
+                    <p>Age: 2 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 27 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 27">
+                <div class="pet-info">
+                    <h3>Tiger</h3>
+                    <p>Breed: Scottish Fold</p>
+                    <p>Age: 1 year</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 28 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 28">
+                <div class="pet-info">
+                    <h3>Whiskers</h3>
+                    <p>Breed: Ragdoll</p>
+                    <p>Age: 3 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 29 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 29">
+                <div class="pet-info">
+                    <h3>Chester</h3>
+                    <p>Breed: Russian Blue</p>
+                    <p>Age: 2 years</p>
+                </div>
+            </div>
+    
+            <!-- Pet Card 30 -->
+            <div class="pet-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pet 30">
+                <div class="pet-info">
+                    <h3>Shadow</h3>
+                    <p>Breed: Siamese</p>
+                    <p>Age: 1 year</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    </div>
+</body>
+</html>

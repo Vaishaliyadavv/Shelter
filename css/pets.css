@@ -1,0 +1,317 @@
+/* Reset Styles */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Reset and Global Styles */
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.top-bar {
+    position: fixed;  
+    top: 0;           
+    left: 0;          
+    width: 100%;      
+    background-color: #ff875f; 
+    color: #fff;
+    padding: 15px 20px;
+    z-index: 1000;    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-input {
+    width: 300px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+/* .quick-filters {
+    display: flex;
+    gap: 10px;
+} */
+
+/* .filter-btn {
+    background-color: #ffcc66;
+    border: none;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} */
+
+.filter-btn:hover {
+    background-color: #e5b659;
+}
+
+/* Base Style */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #ff6f61, #ffb347); /* Background matching the site's theme */
+    margin: 0;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    padding: 20px;
+    /* margin-top: 80px; */
+    margin-top: 60px ;
+
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    position: fixed;
+    top: 80px; /* Below top bar */
+    bottom: 0;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    color: #e5875a;
+    margin-bottom: 15px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.filter-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.filter-section input[type="checkbox"],
+.filter-section input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 280px; /* Spacing for sidebar */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    /* position:relative; */
+}
+
+
+.pet-card {
+    width: 350px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pet-card img {
+    width: 100%;
+    height: 200px; /* Fixed height to ensure consistent image size */
+    object-fit: cover; /* Ensures images cover the container while maintaining aspect ratio */
+    object-position: center; /* Centers the image inside the container */
+}
+
+
+.pet-info {
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.pet-info h3 {
+    margin-top: 0;
+}
+
+.pet-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: none;
+}
+
+@media (max-width: 1492px) {
+    .pet-card {
+        width: 330px; /* Smaller card width */
+    }
+}
+
+/* For tablet-size screens or smaller */
+@media (max-width: 768px) {
+    .pet-card {
+        width: 100%; /* Full width on smaller screens */
+        height: auto;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

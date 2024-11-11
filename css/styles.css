@@ -395,11 +395,39 @@ nav {
     text-align: center;
 }
 
-.adoption-plans h1 {
+/* .adoption-plans h1 {
     font-size: 48px;
     margin-bottom: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+} */
+
+.adoption-plans h1 {
+    font-size: 60px;                      /* Larger size for emphasis */
+    font-weight: 500;                     /* Bold for impact */
+    letter-spacing: 1.2px;                /* Slight letter spacing */
+    margin-bottom: 50px;                  /* Adjusted spacing for separation */
+    text-align: center;                   /* Centered alignment for balance */
+    text-transform: uppercase;
+
+    /* Gradient background for text */
+    /* background: linear-gradient(135deg, #b96b4c, #d4a15e);  */
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+
+    /* Subtle shadow for contrast and depth */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); 
+
+    /* Animation to make it dynamic */
+    background-size: 200% 200%;
+    animation: gradientShiftAdoption 8s ease-in-out infinite;
 }
+
+/* Gradient animation */
+@keyframes gradientShiftAdoption {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
 
 .panels {
     display: flex;
@@ -585,16 +613,45 @@ nav {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.featured-pets h1 {
-    font-size: 60px;  /* Match hero h1 size */
+/* .featured-pets h1 {
+    font-size: 60px;  
     letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow for subtle depth */
-    background: linear-gradient(135deg, #ff9d6f, #ffcc66); /* Lighter orangish-yellowish gradient */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);  */
+    /* background: linear-gradient(135deg, #ff9d6f, #ffcc66); */
+    /* background: linear-gradient(135deg, #e5875a, #e5b659);
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 60px;
     padding: 0 20px;
+} */
+
+.featured-pets h1 {
+    font-size: 64px;                /* Slightly larger for emphasis */
+    font-weight: 500;               /* Bolder weight for a more impactful look */
+    letter-spacing: 1.5px;          /* Increased spacing for a cleaner, elegant feel */
+    line-height: 1.2;               /* Slightly tighter line height */
+    text-transform: uppercase;      /* All caps for a strong, bold headline */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15); /* Slightly larger and softer shadow */
+    
+    background: linear-gradient(135deg, #d9764e, #c2a749); /* Darker gradient for more richness */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Subtle animated gradient transition for effect */
+    background-size: 200% 200%;
+    animation: gradientShift 6s ease-in-out infinite;
+
+    margin-bottom: 60px;
+    padding: 0 20px;
 }
+
+/* Animation for a gentle gradient shift */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
 
 .cards-container {
     display: flex;
@@ -683,9 +740,18 @@ nav {
 }
 
 /* Adjustments for mobile responsiveness */
+/* Adjust card size for screens below 1492px */
+@media (max-width: 1492px) {
+    .flip-card {
+        width: 470px; /* Smaller card width */
+        height: 350px; /* Adjust height to maintain proportion */
+    }
+}
+
+/* For tablet-size screens or smaller */
 @media (max-width: 768px) {
     .flip-card {
-        width: 100%;
+        width: 100%; /* Full width on smaller screens */
         height: auto;
     }
 
@@ -693,68 +759,100 @@ nav {
         flex-direction: column;
         align-items: center;
     }
-
 }
 
+/* Enhanced Footer Styling */
 .footer {
-    background: white;
-     color: black;
-    padding: 40px 20px;
+    background: #727070; /* Darker background for better contrast */
+    color: #f5f5f5;   /* Light text color */
+    padding: 60px 20px; /* Increased padding */
     text-align: center;
+    font-size: 16px;
 }
 
 .footer-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     max-width: 1200px;
     margin: auto;
+    text-align: left;
 }
 
-.footer-info, .footer-links, .footer-social {
-    margin-bottom: 20px;
+/* Footer sections layout */
+.footer-info,
+.footer-links,
+.footer-social {
+    flex: 1; /* Each section takes equal space */
+    min-width: 250px; /* Minimum width to avoid shrinking too much on smaller screens */
+    margin-bottom: 30px;
+}
+
+.footer-info {
+    text-align: left;
 }
 
 .footer h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-bottom: 20px;
+    font-size: 24px; /* Larger font size for section headers */
+    color: #ffcc66; /* Accent color for headers */
 }
 
 .footer p {
-    margin: 5px 0;
+    margin: 8px 0;
+    line-height: 1.6; /* Improved readability */
 }
 
 .footer-links ul {
     list-style: none;
     padding: 0;
+    text-align: left;
 }
 
 .footer-links li {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .footer-links a {
-    color: white;
+    color: #f5f5f5;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #ffeedb;
+    color: #ffcc66; /* Lighter accent color on hover */
+}
+
+.footer-social {
+    text-align: left;
 }
 
 .footer-social a {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .footer-social img {
-    width: 30px;
-    height: 30px;
-    transition: opacity 0.3s ease;
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+    filter: grayscale(100%); /* Initial grayscale for social icons */
 }
 
 .footer-social img:hover {
-    opacity: 0.7;
+    transform: scale(1.1); /* Scale on hover for a subtle effect */
+    filter: grayscale(0);   /* Full color on hover */
 }
 
+/* Adjustments for mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .footer-info, .footer-links, .footer-social {
+        text-align: center;
+        min-width: unset;
+    }
+}
