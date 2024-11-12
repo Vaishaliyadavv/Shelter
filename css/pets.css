@@ -265,12 +265,14 @@ body {
 
 
 .pet-card {
-    width: 350px;
+    /* width: 300px; */
     margin: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px; /* Flexbox properties for responsive columns */
+    max-width: 350px;
 }
 
 .pet-card img {
@@ -295,6 +297,24 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: none;
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin: 0;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        padding: 0;
+    }
 }
 
 @media (max-width: 1492px) {
